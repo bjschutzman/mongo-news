@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>News: Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body { background-color: #f9f7f1; }
+      #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+      }
+      .jumbotron{
+          background: black;
+          color: white;
+          font-family: 'Playfair Display', serif;
+          text-align: center;
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 60%;
+        height: 700px;
+        text-align: center;
+        border: 2px;
+      }
+      #notes {
+        float: right;
+        width: 30%;
+      }
+    
+      textarea, input {
+        display: block;
+        width: 100%;
+        color: #2f2f2f;
+        background-color: #f9f7f1;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+      p{
+        font-family: serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">News Scraper</h1>
+                <p class="lead">Search gaming headlines, add comments, and save for later!</p>
+            </div>
+        </div>
+      <div id="articles"></div>
+      <div id="notes"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

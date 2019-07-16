@@ -31,7 +31,7 @@ $.getJSON("/articles", function(data) {
         $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
         // A button to submit a new note, with the id of the article saved to it
         $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
-  
+        $("#notes").append("<button data-id='" + data._id + "' id='deletenote'>Delete Note</button>");
         // If there's a note in the article
         if (data.note) {
           // Place the title of the note in the title input
@@ -70,3 +70,26 @@ $.getJSON("/articles", function(data) {
     $("#titleinput").val("");
     $("#bodyinput").val("");
   });
+  
+
+  // $(document).on("click", "#deletenote", function() {
+  //   // Save the p tag that encloses the button
+  //   var thisId = $(this).parent();
+  //   // Make an AJAX GET request to delete the specific note
+  //   // this uses the data-id of the p-tag, which is linked to the specific note
+  //   $.ajax({
+  //     method: "GET",
+  //     url: "/delete/" + thisId.attr("data-id"),
+  
+  //     // On successful call
+  //     success: function(data) {
+  //       // Remove the p-tag from the DOM
+  //       data.remove();
+  //       // Clear the note and title inputs
+  //       $("#titleinput").val("");
+  //       $("#bodyinput").val("");
+  //       // Make sure the #action-button is submit (in case it's update)
+        
+  //     }
+  //   });
+  // });
